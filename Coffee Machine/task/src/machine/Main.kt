@@ -31,11 +31,11 @@ class CoffeeMachine(var water: Int, var milk: Int, var beans: Int, var cups: Int
                 "take" -> {
                     println("I gave you \$$money\n")
                     money = 0
-                    action()
+                    nextAction()
                 }
                 "remaining" -> {
                     message()
-                    action()
+                    nextAction()
                 }
                 "exit" -> exit()
             }
@@ -51,7 +51,7 @@ class CoffeeMachine(var water: Int, var milk: Int, var beans: Int, var cups: Int
                 }
                 "back" -> {
                     state = State.SELECT_ACTION
-                    action()
+                    nextAction()
                 }
             }
             State.FILLING -> when(stage){
@@ -74,7 +74,7 @@ class CoffeeMachine(var water: Int, var milk: Int, var beans: Int, var cups: Int
                     cups += input.toInt()
                     stage = 1
                     state = State.SELECT_ACTION
-                    action()
+                    nextAction()
                 }
             }
         }
@@ -94,7 +94,7 @@ class CoffeeMachine(var water: Int, var milk: Int, var beans: Int, var cups: Int
     }
 
     private fun isPos(number:Int) = number >= 0
-    fun action(){
+    fun nextAction(){
         println("Write action (buy, fill, take, remaining, exit): ")
     }
 
@@ -122,14 +122,14 @@ class CoffeeMachine(var water: Int, var milk: Int, var beans: Int, var cups: Int
             }
         }
         state = State.SELECT_ACTION
-        action()
+        nextAction()
     }
 }
 
 fun main() {
     val scanner = Scanner(System.`in`)
     val coffeeMachine = CoffeeMachine(400,540,120,9,550)
-    coffeeMachine.action()
+    coffeeMachine.nextAction()
     do {
         coffeeMachine.process(scanner.next())
     }while (coffeeMachine.working)
