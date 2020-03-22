@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Coffee_Machine-task_main" target="1.8" />
+      <module name="Coffee_Machine-task_test" target="1.8" />
+      <module name="Problems-Currency_comparision_main" target="1.8" />
+      <module name="Problems-Currency_comparision_test" target="1.8" />
+      <module name="Problems-From_0_to_9_main" target="1.8" />
+      <module name="Problems-From_0_to_9_test" target="1.8" />
+      <module name="Problems-Hello,_Kotlin_main" target="1.8" />
+      <module name="Problems-Hello,_Kotlin_test" target="1.8" />
+      <module name="Problems-Strings_as_objects_main" target="1.8" />
+      <module name="Problems-Strings_as_objects_test" target="1.8" />
+      <module name="util_main" target="1.8" />
+      <module name="util_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
